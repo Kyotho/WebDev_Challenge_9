@@ -1,0 +1,583 @@
+/* font-family: 'Playfair Display', serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Dancing Script OT', arial; */
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+b,
+u,
+i,
+ul,
+center,
+fieldset,
+form,
+label,
+caption,
+figure,
+figcaption,
+footer,
+header,
+input,
+textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* body {
+  height: 800vh;
+} */
+
+.container {
+  max-width: 98%;
+  margin: 0 auto;
+}
+
+/* HEADER */
+
+.header__bg {
+  background-image: url('../images/header.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 1%;
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+}
+.container--header {
+  position: relative;
+  display: flex;
+  background-color: rgba(221, 168, 94, 0.15);
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo {
+  background-image: url(../images/logo_header.png);
+  height: 100px;
+  width: 180px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.topic--header {
+  margin-top: 2%;
+  font-size: 48px;
+  line-height: 58px;
+  color: #ffffff;
+  font-family: 'Playfair Display';
+  font-weight: 400;
+  text-align: center;
+}
+
+.subtitle--header {
+  width: 461px;
+  height: 39px;
+  font-size: 16px;
+  line-height: 23px;
+  color: #ffffff;
+  font-family: 'Raleway';
+  font-weight: 400;
+  text-align: center;
+}
+
+.arrow__box {
+  display: block;
+  position: absolute;
+  bottom: 2vh;
+}
+
+.btn--arrow {
+  position: absolute;
+  bottom: 2vh;
+  width: 45px;
+  height: 35px;
+  -webkit-animation: move 1s alternate infinite ease-in-out;
+  animation: move 1s alternate infinite ease-in-out;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+@-webkit-keyframes move {
+  to {
+    bottom: 6vh;
+  }
+}
+
+@keyframes move {
+  to {
+    bottom: 6vh;
+  }
+}
+
+.btn--arrow:hover {
+  cursor: pointer;
+}
+
+/* NAVBAR */
+
+.container--navbar {
+  display: flex;
+  height: 9vh;
+  padding: 0;
+  align-items: center;
+  border-bottom: 1px solid rgba(94, 88, 88, 0.418);
+  width: 100%;
+}
+
+.navbar__logo {
+  margin-left: 5%;
+}
+.navbar__logo--img {
+  width: 120px;
+  height: 25px;
+}
+
+.navbar__nav {
+  width: 70%;
+  margin: 0 0 0 auto;
+}
+
+.nav__item {
+  text-transform: uppercase;
+  float: right;
+  list-style: none;
+  text-decoration: none;
+  margin: 0 5%;
+}
+
+.nav__link {
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 31px;
+  color: #696969;
+  font-family: 'Raleway';
+  font-weight: 500;
+}
+.nav__link:hover {
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+}
+
+/* ABOUT */
+
+.container--about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 92vh;
+}
+
+.title {
+  font-size: 30px;
+  line-height: 14px;
+  color: #5a5957;
+  text-transform: uppercase;
+  align-items: center;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+.border {
+  margin-top: 1.5%;
+  width: 65px;
+  height: 5px;
+  background-color: #d07c7c;
+}
+
+.subtitle--about {
+  margin-top: 2%;
+  width: 987px;
+  height: 129px;
+  font-size: 19px;
+  line-height: 30px;
+  color: #848282;
+  font-family: 'Raleway';
+  font-weight: 300;
+  text-align: center;
+}
+
+/* WORKS */
+
+.container--works {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.title--works {
+  margin-top: 5%;
+}
+
+.works__gallery--grid {
+  width: 70%;
+  height: 140vh;
+  display: grid;
+  grid-template-areas:
+    'nature nature urban'
+    'people wedding urban'
+    'architecture architecture animals';
+  grid-gap: 15px;
+
+  margin-top: 4%;
+}
+
+.photo {
+  background-color: gray;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.5s;
+}
+
+.photo--nature {
+  grid-area: nature;
+  background-image: url(../images/nature.png);
+  background-position: center;
+}
+
+.photo--urban {
+  grid-area: urban;
+  background-image: url(../images/urban.png);
+  background-position: bottom;
+}
+.photo--people {
+  grid-area: people;
+  background-image: url(../images/people.png);
+  background-position: right;
+}
+.photo--wedding {
+  grid-area: wedding;
+  background-image: url(../images/wedding.png);
+  background-position: left;
+}
+.photo--architecture {
+  grid-area: architecture;
+  background-image: url(../images/architecture.png);
+  background-position: center;
+}
+.photo--animals {
+  grid-area: animals;
+  background-image: url(../images/animal.png);
+  background-position: left;
+}
+
+.photo__box {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+  transition: 0.5s;
+}
+
+.graphic {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.nature__graphic {
+  background-image: url(../images/nature_text.png);
+}
+.urban__graphic {
+  background-image: url(../images/urban_text.png);
+}
+.people__graphic {
+  background-image: url(../images/people_text.png);
+}
+.wedding__graphic {
+  background-image: url(../images/wedding_text.png);
+}
+.architecture__graphic {
+  background-image: url(../images/architecture_text.png);
+}
+
+.animals__graphic {
+  background-image: url(../images/animal_text.png);
+}
+
+.photo__box:hover {
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+
+.btn--red {
+  margin-top: 5%;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  background-color: #d07c7c;
+  font-size: 16px;
+  line-height: 12px;
+  color: #ffffff;
+  font-family: 'Raleway';
+  font-weight: 500;
+  border-radius: 0;
+}
+
+/* TESTIMONIALS */
+
+.container--testimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  height: 50vh;
+}
+
+.subtitle--testimonials {
+  margin-top: 3%;
+  width: 700px;
+  font-size: 18px;
+  line-height: 25px;
+  color: #848282;
+  font-family: 'Raleway';
+  font-weight: 300;
+  text-align: center;
+}
+
+.author--testimonials {
+  margin-top: 2%;
+  width: 283px;
+  height: 16px;
+  font-size: 14px;
+  line-height: 25px;
+  color: #a0a0a0;
+  font-family: 'Raleway';
+  font-weight: 300;
+  text-align: center;
+}
+.testimonials__dots {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2%;
+  height: 4vh;
+  width: 4vw;
+}
+
+.test__dot {
+  width: 8px;
+  height: 8px;
+  background: gray;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+/* VIDEO */
+
+.container--video {
+  background: linear-gradient(rgba(90, 90, 56, 0.425), rgba(90, 90, 56, 0.425)),
+    url('../images/photo_video.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 75vh;
+  width: 100%;
+}
+
+.video--play {
+  background-image: url(../images/watch.png);
+  background-position: center;
+  background-repeat: no-repeat;
+
+  height: 100%;
+  width: 100%;
+  transition: all 0.5s;
+}
+
+/* FOLLOW  */
+
+.container--follow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.icons__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5%;
+  height: 10vh;
+  width: 60%;
+}
+
+.icon {
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.icon--pinterest {
+  background-image: url(../images//pinterest.png);
+}
+
+.icon--instagram {
+  background-image: url(../images/instagram.png);
+}
+
+.icon--twitter {
+  background-image: url(../images/twitter-alt.png);
+}
+
+.icon--google {
+  background-image: url(../images/google.png);
+}
+
+.icon--tumblr {
+  background-image: url(../images/tumblr-alt.png);
+}
+
+.icon:hover {
+  background-color: #e6b5b5;
+}
+
+/* CONTACT */
+
+.container--contact {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url('../images/Architecture-picture.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-top: 5%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.subtitle--contact {
+  margin-top: 3%;
+  font-size: 14px;
+  line-height: 18px;
+  color: #848282;
+  font-family: 'Raleway';
+  font-weight: 300;
+}
+
+.contact__form {
+  margin-top: 3%;
+  width: 50%;
+}
+
+.form-control {
+  border-color: #d07c7c;
+}
+.contact__info {
+  margin: 5% 0 0 4%;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 18px;
+  color: #848282;
+  font-family: 'Raleway';
+  font-weight: 300;
+}
+
+.btn--contact {
+  margin-top: 3%;
+  float: right;
+  padding: 20px 50px;
+}
+
+/* FOOTER */
+
+.container--footer {
+  /* height: 20vh; */
+  position: relative;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow__box--up {
+  width: 15px;
+  height: 15px;
+  margin-top: 1%;
+}
+
+.btn--up {
+  /* background-image: url(../images/angle-up.png);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat; */
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 2vh;
+  -webkit-animation: mymove 1s alternate infinite ease-in-out;
+  animation: mymove 1s alternate infinite ease-in-out;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+@-webkit-keyframes mymove {
+  to {
+    top: 4vh;
+  }
+}
+
+@keyframes mymove {
+  to {
+    top: 4vh;
+  }
+}
+
+.logo--footer {
+  background-image: url(../images/logo_black.png);
+  margin-top: 1%;
+  height: 100px;
+  width: 120px;
+}
+
+.footer__copyright {
+  margin-top: 1%;
+  font-size: 12px;
+  line-height: 20px;
+  color: #848282;
+  font-family: 'Raleway';
+  font-weight: 300;
+  padding-bottom: 2%;
+}
