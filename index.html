@@ -18,7 +18,7 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body>
+  <body data-target="">
     <!-- HEADER START -->
     <header>
       <div class="container header__bg">
@@ -30,39 +30,40 @@
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo
             maiores deleniti magni voluptates voluptatem adipisci?
           </p>
-          <a class="arrow__box" href="#">
+          <a class="arrow__box" href="#about">
             <img src="./images/arrow-down.png" alt="" class="btn btn--arrow" />
           </a>
         </div>
       </div>
     </header>
     <!-- HEADER END -->
-    <!-- NAVBAR START -->
-    <nav class="container container--navbar" id="main__nav">
-      <a class="navbar__logo" href="#"
-        ><img
-          class="navbar__logo--img"
-          src="./images/logo_navbar.png"
-          alt="MariaAnna-logo"
-      /></a>
-      <button class="hamburger"></button>
-      <ul class="navbar__nav">
-        <li class="nav__item">
-          <a href="#about" class="nav__link">about me</a>
-        </li>
-        <li class="nav__item"><a href="#works" class="nav__link">works</a></li>
-        <li class="nav__item">
-          <a href="#follow" class="nav__link">follow me</a>
-        </li>
-        <li class="nav__item">
-          <a href="#contact" class="nav__link">contact me</a>
-        </li>
-      </ul>
-    </nav>
-    <!-- NAVBAR END -->
-
+    
     <!-- ABOUT START -->
     <section id="about">
+      <!-- NAVBAR START -->
+        <nav class="container container--navbar" id="main__nav">
+            <a class="navbar__logo" href="#"
+              ><img
+                class="navbar__logo--img"
+                src="./images/logo_navbar.png"
+                alt="MariaAnna-logo"
+            /></a>
+            <button class="hamburger"></button>
+            <ul class="navbar__nav">
+              <li class="nav__item">
+                <a href="#about" class="nav__link">about me</a>
+              </li>
+              <li class="nav__item"><a href="#works" class="nav__link">works</a></li>
+              <li class="nav__item">
+                <a href="#follow" class="nav__link">follow me</a>
+              </li>
+              <li class="nav__item">
+                <a href="#contact" class="nav__link">contact me</a>
+              </li>
+            </ul>
+          </nav>
+       <!-- NAVBAR END -->
+
       <div class="container container--about">
         <h2 class="title title--about">a little bit about me</h2>
         <div class="border"></div>
@@ -80,6 +81,7 @@
 
     <!-- WORKS START -->
     <section id="works">
+      
       <div class="container container--works">
         <h2 class="title title--works">works</h2>
         <div class="border"></div>
@@ -121,18 +123,61 @@
     <!-- WORKS END -->
     <!-- TESTIMONIALS START -->
     <section>
-      <div class="container container--testimonials">
-        <h2 class="title title-testimonials">See the world through my lens</h2>
-        <div class="border"></div>
-        <p class="subtitle subtitle--testimonials">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-          soluta eum tempore accusamus laboriosam nam?
-        </p>
-        <p class="author author--testimonials">John Doe CEO at Unknown</p>
-        <div class="testimonials__dots">
-          <span class="test__dot"></span>
-          <span class="test__dot"></span>
-          <span class="test__dot"></span>
+     
+      <div
+      id="carouselExampleIndicators"
+      class="carousel slide"
+      data-ride="carousel"
+      data-interval="2000"
+    >
+      <ol class="carousel-indicators">
+        <li
+          data-target="#carouselExampleIndicators"
+          data-slide-to="0"
+          class="active"
+        ></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class=" d-block  container container--testimonials">
+            <h2 class="title title--testimonials">
+              see the world through my lens
+            </h2>
+            <div class="border"></div>
+            <p class="subtitle subtitle--testimonials">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates soluta eum tempore accusamus laboriosam nam?
+            </p>
+            <p class="author author--testimonials">John Doe CEO at Unknown</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-block  container container--testimonials">
+            <h2 class="title title--testimonials">
+              Lorem ipsum dolor sit amet consectetur.
+            </h2>
+            <div class="border"></div>
+            <p class="subtitle subtitle--testimonials">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Asperiores cupiditate quia beatae pariatur culpa dicta!
+            </p>
+            <p class="author author--testimonials">Kowalski CEO at Unknown</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-block container container--testimonials">
+            <h2 class="title title--testimonials">
+              Lorem ipsum dolor sit amet.
+            </h2>
+            <div class="border"></div>
+            <p class="subtitle subtitle--testimonials">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+              amet ipsam dolores corrupti. Nihil.
+            </p>
+            <p class="author author--testimonials">Jon Snow CEO at Unknown</p>
+          </div>
         </div>
       </div>
     </section>
@@ -144,7 +189,7 @@
       </div>
     </section>
     <!-- VIDEO END -->
-    <!-- VIDEO START -->
+    <!-- ICONS START -->
     <section id="follow">
       <div class="container container--follow">
         <h2 class="title title-follow">follow me</h2>
@@ -158,7 +203,7 @@
         </div>
       </div>
     </section>
-    <!-- VIDEO END -->
+    <!-- ICONS END -->
 
     <!-- CONTACT START -->
     <section id="contact">
@@ -198,7 +243,7 @@
     <!-- FOOTER START -->
     <section id="footer">
       <div class="container container--footer">
-        <a href="#" class="arrow__box--up"
+        <a href="#about" class="arrow__box--up"
           ><img class="btn--up" src="./images/angle-up.png" alt=""
         /></a>
 
@@ -209,11 +254,7 @@
     <!-- FOOTER END -->
 
     <!-- jquery -->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
+<script src="js/jquery-3.3.1.js"></script>
     <!-- popper -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -226,5 +267,6 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
