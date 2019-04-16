@@ -95,6 +95,7 @@ textarea {
 }
 
 .subtitle--header {
+  width: 40%;
   font-size: 16px;
   line-height: 23px;
   color: #ffffff;
@@ -111,6 +112,7 @@ textarea {
 
 .btn--arrow {
   position: absolute;
+  left: -3vw;
   bottom: 2vh;
   width: 45px;
   height: 35px;
@@ -190,9 +192,22 @@ textarea {
 }
 
 .hamburger {
-  display: none;
+  float: right;
+  font-size: 20px;
+  background-color: #fff;
+  border: none;
+  position: absolute;
+  right: 5%;
 }
 
+.show {
+  position: absolute;
+  top: 111%;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  text-align: center;
+}
 /* ABOUT */
 
 .container--about {
@@ -221,7 +236,8 @@ textarea {
 }
 
 .subtitle--about {
-  margin-top: 2%;
+  width: 60%;
+  margin: 3% auto 0 auto;
   font-size: 19px;
   line-height: 30px;
   color: #848282;
@@ -626,4 +642,25 @@ textarea {
 .footer__copyright:hover {
   color: #d07c7c;
   cursor: pointer;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 960px) {
+  .navbar__nav {
+    flex-direction: column;
+
+    margin: 0 auto;
+  }
+  .nav__item {
+    width: 98%;
+    margin: 0 auto;
+  }
+  .nav__link {
+    width: 98%;
+    margin: 0 auto;
+  }
+  .nav__link:hover {
+    box-shadow: none;
+  }
 }
