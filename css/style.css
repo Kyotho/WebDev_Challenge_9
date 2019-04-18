@@ -55,7 +55,10 @@ textarea {
 /* HEADER */
 
 .header__bg {
-  background-image: url('../images/header.png');
+  background: linear-gradient(rgba(90, 90, 56, 0.425), rgba(90, 90, 56, 0.425)),
+    url('../images/header.png');
+
+  filter: grayscale(0.5);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -67,7 +70,7 @@ textarea {
 .container--header {
   position: relative;
   display: flex;
-  background-color: rgba(221, 168, 94, 0.15);
+
   width: 100%;
   height: 100%;
   justify-content: center;
@@ -86,8 +89,8 @@ textarea {
 
 .topic--header {
   margin-top: 2%;
-  font-size: 48px;
-  line-height: 58px;
+  font-size: 53px;
+  line-height: 63px;
   color: #ffffff;
   font-family: 'Playfair Display';
   font-weight: 400;
@@ -96,8 +99,8 @@ textarea {
 
 .subtitle--header {
   width: 40%;
-  font-size: 16px;
-  line-height: 23px;
+  font-size: 21px;
+  line-height: 28px;
   color: #ffffff;
   font-family: 'Raleway';
   font-weight: 400;
@@ -113,6 +116,7 @@ textarea {
 .btn--arrow {
   position: absolute;
   left: -3vw;
+  margin: 0 auto;
   bottom: 2vh;
   width: 45px;
   height: 35px;
@@ -141,6 +145,7 @@ textarea {
 /* NAVBAR */
 
 .container--navbar {
+  position: relative;
   display: flex;
   height: 9vh;
   padding: 0;
@@ -158,11 +163,13 @@ textarea {
 }
 
 .navbar__nav {
+  position: absolute;
+  right: 0%;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: right;
-  width: 50%;
+
+  width: 40%;
   margin: 0 0 0 auto;
 }
 
@@ -215,7 +222,7 @@ textarea {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 92vh;
+  height: 91vh;
 }
 
 .title {
@@ -407,7 +414,7 @@ textarea {
 
 .subtitle--testimonials {
   margin: 4% auto 0 auto;
-  width: 700px;
+
   font-size: 18px;
   line-height: 25px;
   color: #848282;
@@ -418,7 +425,7 @@ textarea {
 
 .author--testimonials {
   margin: 2% auto 0 auto;
-  width: 283px;
+
   height: 16px;
   font-size: 14px;
   line-height: 25px;
@@ -455,12 +462,9 @@ textarea {
   height: 75vh;
   width: 100%;
   transition: 0.5s;
-  background-size: 100%;
+  background-size: cover;
 }
 
-.container--video:hover {
-  background-size: 120%;
-}
 .video--play {
   background-image: url(../images/watch.png);
   background-position: center;
@@ -646,10 +650,22 @@ textarea {
 
 /* MEDIA QUERIES */
 
+@media (max-width: 400px) {
+  .header__bg {
+    background-position: left;
+  }
+  .topic--header {
+    font-size: 38px;
+    line-height: 48px;
+  }
+  .subtitle--header {
+    width: 80%;
+  }
+}
+
 @media (max-width: 960px) {
   .navbar__nav {
     flex-direction: column;
-
     margin: 0 auto;
   }
   .nav__item {
@@ -662,5 +678,221 @@ textarea {
   }
   .nav__link:hover {
     box-shadow: none;
+  }
+}
+@media (max-width: 1560px) {
+  .navbar__nav {
+    width: 50%;
+  }
+}
+@media (max-width: 1400px) {
+  .btn--arrow {
+    left: -2vw;
+  }
+
+  .works__gallery--grid {
+    height: 100vh;
+  }
+}
+@media (max-width: 1250px) {
+  .navbar__nav {
+    width: 60%;
+  }
+  .carousel {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .subtitle--header {
+    width: 60%;
+  }
+  .navbar__nav {
+    width: 65%;
+  }
+
+  .works__gallery--grid {
+    height: 80vh;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header__bg {
+    background-position: left;
+  }
+  .contact__form {
+    width: 70%;
+  }
+}
+
+@media (max-width: 850px) and (orientation: landscape) {
+  .topic--header {
+    font-size: 33px;
+    line-height: 43px;
+  }
+  .arrow__box {
+    bottom: 0;
+  }
+  .subtitle--header {
+    width: 80%;
+  }
+  .btn--arrow {
+    left: -4vw;
+  }
+
+  .container--navbar {
+    height: 11vh;
+  }
+  .container--about {
+    height: 89vh;
+  }
+  .title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .subtitle {
+    font-size: 15px;
+    line-height: 24px;
+  }
+  .works__gallery--grid {
+    height: 140vh;
+    width: 80%;
+  }
+  .graphic {
+    background-size: 60%;
+  }
+  .carousel {
+    width: 95%;
+  }
+  .carousel-inner {
+    height: 90vh;
+  }
+  .container--contact {
+    height: 160vh;
+  }
+  .btn--contact {
+    padding: 10px 30px;
+  }
+  .logo--footer {
+    height: 70px;
+  }
+  .footer__copyright {
+    padding-bottom: 1%;
+  }
+}
+
+@media (max-width: 640px) and (orientation: landscape) {
+  .navbar__logo--img {
+    height: 20px;
+  }
+  .carousel-inner {
+    height: 100vh;
+  }
+  .icons__box {
+    width: 80%;
+  }
+  .container--contact {
+    height: 190vh;
+  }
+}
+@media (max-width: 550px) and (orientation: landscape) {
+  .title {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .subtitle {
+    font-size: 11px;
+    line-height: 20px;
+  }
+  .works__gallery--grid {
+    height: 120vh;
+  }
+  .carousel-inner {
+    height: 120vh;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  .topic--header {
+    width: 80%;
+  }
+  .container--works {
+    min-height: 0;
+  }
+  .works__gallery--grid {
+    height: 60vh;
+    width: 100%;
+  }
+  .graphic {
+    background-size: 60%;
+  }
+  .title--testimonials {
+    margin-top: 20%;
+  }
+  .container--testimonials {
+    height: 35vh;
+  }
+  .container--video {
+    height: 50vh;
+  }
+  .carousel {
+    width: 100%;
+  }
+}
+
+@media (max-width: 415px) and (orientation: portrait) {
+  .topic--header {
+    font-size: 33px;
+    line-height: 43px;
+  }
+  .arrow__box {
+    bottom: 0;
+  }
+  .subtitle--header {
+    width: 80%;
+  }
+  .btn--arrow {
+    left: -4vw;
+  }
+
+  .container--navbar {
+    height: 11vh;
+  }
+  .container--about {
+    height: 89vh;
+  }
+  .title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .subtitle {
+    font-size: 15px;
+    line-height: 24px;
+    width: 90%;
+  }
+  .works__gallery--grid {
+    height: 40vh;
+    width: 100%;
+  }
+  .graphic {
+    background-size: 60%;
+  }
+  .carousel {
+    width: 95%;
+  }
+  .carousel-inner {
+    height: 90vh;
+  }
+  .container--contact {
+    height: 160vh;
+  }
+  .btn--contact {
+    padding: 10px 30px;
+  }
+  .logo--footer {
+    height: 70px;
+  }
+  .footer__copyright {
+    padding-bottom: 1%;
   }
 }
