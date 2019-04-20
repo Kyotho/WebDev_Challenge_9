@@ -650,19 +650,6 @@ textarea {
 
 /* MEDIA QUERIES */
 
-@media (max-width: 400px) {
-  .header__bg {
-    background-position: left;
-  }
-  .topic--header {
-    font-size: 38px;
-    line-height: 48px;
-  }
-  .subtitle--header {
-    width: 80%;
-  }
-}
-
 @media (max-width: 960px) {
   .navbar__nav {
     flex-direction: column;
@@ -730,6 +717,9 @@ textarea {
     font-size: 33px;
     line-height: 43px;
   }
+  .navbar__nav {
+    width: 100%;
+  }
   .arrow__box {
     bottom: 0;
   }
@@ -765,7 +755,7 @@ textarea {
     width: 95%;
   }
   .carousel-inner {
-    height: 90vh;
+    height: 100vh;
   }
   .container--contact {
     height: 160vh;
@@ -816,6 +806,7 @@ textarea {
   .topic--header {
     width: 80%;
   }
+
   .container--works {
     min-height: 0;
   }
@@ -837,6 +828,15 @@ textarea {
   }
   .carousel {
     width: 100%;
+  }
+}
+
+@media (max-width: 960px) and (orientation: portrait) {
+  .navbar__nav {
+    width: 100%;
+  }
+  .icons__box {
+    width: 80%;
   }
 }
 
@@ -883,8 +883,14 @@ textarea {
   .carousel-inner {
     height: 90vh;
   }
+  .icons__box {
+    width: 100%;
+  }
   .container--contact {
     height: 160vh;
+  }
+  .subtitle--contact {
+    text-align: center;
   }
   .btn--contact {
     padding: 10px 30px;
